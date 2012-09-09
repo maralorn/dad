@@ -26,25 +26,27 @@ update_nicks = ->
 
 socket.on 'connection', (client) ->
 	client.emit 'nicks', nicks
-	name = 'Zufälliger Zuschauer'
-	client.on 'login', (loginname) ->
-		name = loginname
-		nicks.push name
+	nick = 
+		name:'Zufälliger Zuschauer'
+		color: '#000000'
+	client.on 'login', (login) ->
+		nick = login
+		nicks.push nick
 		update_nicks()
 
 	client.on 'roll', (dice) ->
 		socket.emit 'roll',	
-			name: name
+			nick: nick
 			result: get_random(1, dice)
 			dice: '1W' + dice
 			timestamp: (new Date()).getTime()
 	client.on 'say', (text) ->
 		socket.emit 'msg', 	
-			name: name
+			nick: nick
 			msg: text
 			timestamp: (new Date()).getTime()
 	client.on 'disconnect', ->
-		nicks = (nick for nick in nicks when nick isnt name)
+		nicks = (player for player in nicks when player isnt nick)
 		update_nicks()
 
 server.listen 7331 

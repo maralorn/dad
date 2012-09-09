@@ -36,8 +36,7 @@ a.dice{
 	padding: 3px;
 	overflow: auto;
 	background: #ffffff;
-	min-height: 500px;
-	max-height: 800px;
+	height: 800px;
 }	
 #header{
 	height: 10%;
