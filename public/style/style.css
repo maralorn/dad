@@ -34,22 +34,28 @@ a.dice{
 
 #chat{
 	padding: 3px;
-	overflow: auto;
 	background: #ffffff;
-	height: 800px;
+	margin-right: 100px;
+	min-height: 400px;
+	margin-bottom: 100px;
 }	
 #header{
 	height: 10%;
 }
 #input{
 	display:none;
+	position: fixed;
+	bottom: 10px;
+	left: 10px;
 }
 #chat > span{
 	font-weight: bold;
 	color: #aa0000;
 }
 #playerlist{
-	float:right;
+	position: fixed;
+	right: 10px;
+	top: 150px;
 	min-height:200px;
 	min-width:100px;
 }
