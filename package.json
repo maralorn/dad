@@ -1,0 +1,12 @@
+{
+  "name": "dad",
+  "description": "Dungeons & Dragons utility",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "express": "",
+    "coffee-script": "",
+	"socket.io": "",
+	"jade": ""
+  }
+}

@@ -1,0 +1,56 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+body{
+	background: #9B7649;
+	height: 100%;
+}
+a{
+	text-decoration: none;
+}
+
+a.dice{
+	display: inline-block;
+	width: 100px;
+	border-width: 1px;
+	border-color: black;
+	border-style: solid;
+	padding: 2px;
+	margin: 2px;
+	background: #aa0000;
+	color: #ffffff;
+}
+
+#playerlist,#input,#chat, #header{
+	border-width: 2px;
+	border-color: #7FC655 #7FC655 #548B34 #548B34;
+	border-style: solid;
+	background: #68A942;
+	padding: 3px;
+	margin: 5px;
+}
+
+#chat{
+	padding: 3px;
+	overflow: auto;
+	background: #ffffff;
+	min-height: 500px;
+	max-height: 800px;
+}	
+#header{
+	height: 10%;
+}
+#input{
+	display:none;
+}
+#chat > span{
+	font-weight: bold;
+	color: #aa0000;
+}
+#playerlist{
+	float:right;
+	min-height:200px;
+	min-width:100px;
+}
