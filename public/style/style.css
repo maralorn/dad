@@ -3,9 +3,14 @@
 	margin: 0;
 }
 
+@font-face {
+	font-family: baar_sophia;
+	src: url('Clockopia.ttf');
+}
 body{
 	background: #9B7649;
 	height: 100%;
+	font-family: baar_sophia;
 }
 a{
 	text-decoration: none;

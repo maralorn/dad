@@ -1,7 +1,7 @@
 $ ->
 	socket = io.connect "/socket"
 	stamp = (data) ->
-		'<i>('+ (new Date data.timestamp).toLocaleTimeString() + ')</i><b style="color:'+data.nick.color+'">'+data.nick.name+'</b>'
+		'<i>('+ (new Date data.timestamp).toLocaleTimeString() + ')</i>  <b style="color:'+data.nick.color+'">'+data.nick.name+'</b>'
 	($ '.dice').click ->
 		socket.emit 'roll', parseInt ($ this).text()
 	($ 'form#login > input[name="color"]').miniColors()
