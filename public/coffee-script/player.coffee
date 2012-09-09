@@ -18,10 +18,10 @@ $ ->
 		false
 	socket.on 'roll', (data) ->
 		($ '#chat').append (stamp data) + ' hat mit dem <span>'+data.dice+'</span> eine <span>'+data.result+'</span> gewürfelt.<br/>'
-		($ 'body').scrollTop 1000000
+		($ 'html').scrollTop 1000000
 	socket.on 'msg', (data) ->
 		($ '#chat').append (stamp data) + ': '+data.msg+'<br/>'
-		($ 'body').scrollTop 1000000
+		($ 'html').scrollTop 1000000
 	socket.on 'nicks', (nicks) ->
 		($ '#playerlist').empty()
 		($ '#playerlist').append '<b style="color:'+nick.color+'">'+nick.name+'</b><br>' for nick in nicks
